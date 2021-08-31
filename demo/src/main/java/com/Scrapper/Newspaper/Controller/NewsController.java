@@ -29,12 +29,12 @@ public class NewsController {
 	
 		return "AddNewsLink.html";
 	}
-	@RequestMapping("/PincodeLocator")
-	public String PincodeLocator() {
+	@RequestMapping("/Test")
+	public String Test() {
 		
-		//scrapNewsFeeds.Scrapping();
+		scrapNewsFeeds.Scrapping();
 		//return "GlobalDataVisualization.html";
-		return "PincodeLocator.html";
+		return "Test.html";
 	}
 	@RequestMapping("/GlobalDataVisualization")
 	public String GlobalDataVisualization() {

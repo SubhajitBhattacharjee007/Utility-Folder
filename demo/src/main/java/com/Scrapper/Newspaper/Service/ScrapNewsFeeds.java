@@ -33,7 +33,6 @@ public class ScrapNewsFeeds {
 	List<NewsDetails> links = newsDetailsRepository.findAll();
 	String temp = "";
 	String temp2;
-	String temp3;
 	
 	SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
     Date date = new Date(); 
@@ -64,7 +63,7 @@ public class ScrapNewsFeeds {
 				System.out.println("Data fetch completed...");
 				
 			} 
-		catch (IOException e1) {
+		catch (Exception e1) {
 			e1.printStackTrace();
 		}
 	 }

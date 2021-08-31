@@ -1,5 +1,5 @@
          var myGeoJSONPath = 'json/custom.geo.json';
-      
+      	 var map = L.map('map').setView([40.6, 30.8], 1.8);
         	function style(feature) {
                 return {
                 	radius: 8,
@@ -28,18 +28,17 @@
                 : '#faebf5';
         		
         	};
-        	
-        $.getJSON(myGeoJSONPath,
-        		
-        		function(data){
-            		var map = L.map('map').setView([40.6, 30.8], 1.8);
-
-            			L.geoJson(data, {style: style}).addTo(map);
+        
+        $.getJSON(myGeoJSONPath,function(data){
+     
+           L.geoJson(data, {style: style}).addTo(map);
         })
         
+			
         //add title and legend
         var grades = [1000000000, 500000000, 100000000, 50000000, 10000000, 1000000, 0];
-        var div = document.getElementById('legend');
+        var div    = document.getElementById('legend');
+		
 
         grades.forEach(function(grade, i) {
           div.innerHTML +=
